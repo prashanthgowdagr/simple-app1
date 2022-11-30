@@ -9,6 +9,6 @@ RUN useradd jenkins && \
 EXPOSE 80
 EXPOSE 22
 
-RUN systemctl enable --now sshd
+RUN systemctl enable --now ssh
 
 CMD ["apachectl", "-D", "FOREGROUND"]
