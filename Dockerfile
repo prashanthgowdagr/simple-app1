@@ -9,6 +9,8 @@ RUN useradd jenkins && \
 EXPOSE 80
 EXPOSE 22
 
-RUN systemctl enable --now ssh
+#starting ssh service
+#RUN systemctl enable --now ssh
+ENTRYPOINT service ssh restart && bash
 
 CMD ["apachectl", "-D", "FOREGROUND"]
