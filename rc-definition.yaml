@@ -7,12 +7,12 @@ metadata:
 spec:
   template:
     metadata:
-     name: myapp
-     labels:
-      name: myapp
+      name: httpdpod
+      labels:
+        env: production
     spec:
       containers:
-      - name: myapp
+      - name: httpd
         image: httpd:latest
   replicas: 2
         
