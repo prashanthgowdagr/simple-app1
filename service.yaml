@@ -9,5 +9,4 @@ spec:
       port: 80 #This is mandatory****
       targetPort: 80 #same as port if not mentioned
   selector:
-    matchLabels:
-     env: production
+    env: production
