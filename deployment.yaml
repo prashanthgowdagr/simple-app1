@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp-deployment
+  kubernetes.io/change-cause: changed image to nginx
   labels:
     app: myapp
     tier: frontend
@@ -12,11 +13,11 @@ spec:
       env: production
   template:
     metadata:
-      name: httpdpod
+      name: nginxpod
       labels:
         env: production
     spec:
       containers:
-      - name: httpd
-        image: httpd:latest
+      - name: nginx
+        image: nginx:latest
   replicas: 2
