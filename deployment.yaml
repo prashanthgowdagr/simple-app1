@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp-deployment
-  kubernetes.io/change-cause: kubectl apply --filename=deployment.yaml --record=true
   labels:
     app: myapp
     tier: frontend
